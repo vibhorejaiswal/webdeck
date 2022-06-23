@@ -1,0 +1,198 @@
+ <!-- <table>
+      <thead>
+        <tr>
+          <th>Country</th>
+          <th>OrderId</th>
+          <th>Order Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>USA</td>
+          <td>1000</td>
+          <td>$1,300</td>
+        </tr>
+        <tr>
+          <td>USA</td>
+          <td>1001</td>
+          <td>$700</td>
+        </tr>
+        <tr>
+          <td>CA</td>
+          <td>1002</td>
+          <td>$2,000</td>
+        </tr>
+        <tr>
+          <td>CA</td>
+          <td>1003</td>
+          <td>$1,000</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="2">Total</th>
+          <th>$5,000</th>
+        </tr>
+      </tfoot>
+    </table> -->
+    <!-- <div class="rect"></div> -->
+    <!-- <span class="box"></span>
+    <span class="box"></span> -->
+    <!-- <div class="overflow">
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus
+        commodi minima incidunt aliquam ratione vitae dicta recusandae in
+        quaerat maiores. Cumque blanditiis ipsum sint voluptas incidunt, dolorum
+        et delectus, repellat obcaecati quisquam similique provident qui, est
+        repudiandae optio pariatur deleniti accusantium numquam dolores culpa
+        placeat neque. Quia minima aspernatur perspiciatis.
+      </p>
+    </div> -->
+    <!-- <div class="sizing"></div> -->
+    <!-- <div class="boxes">
+      <div class="box box-one"></div>
+      <div class="box box-two"></div>
+      <div class="box box-three"></div>
+    </div> -->
+    <!-- <article class="tweet clearfix">
+      <div class="avatar"></div>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </article> -->
+    <!-- <div class="container">
+      <div class="innercontainer">A</div>
+      <div class="innercontainer">B</div>
+      <div class="innercontainer">C</div>
+    </div> -->
+
+    <!-- <div class="gridcontainer"></div> -->
+    
+
+
+    table, td {
+   /* border: 1px solid #c4dcf3; */
+   border-top: 1px solid #c4dcf3;
+   border-collapse: collapse;
+   padding: 10px;
+}
+
+table tr:nth-child(odd) {
+    background-color: #eef7ff
+}
+
+
+th, tfoot {
+    background-color: #427fef;
+    color: white;
+    padding: 10px;
+    text-align: left
+}
+
+.rect {
+    width: 300px;
+    height: 300px;
+    background-color: tomato;
+    border-radius: 5%;
+    box-shadow: 10px 10px lightgray;
+}
+/* 
+.box::before {
+    content: 'Hello';
+} 
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: gold;
+    display: inline-block;
+} 
+*/
+
+.overflow {
+    width: 150px;
+    height: 150px;
+    border: 3px solid gold;
+    overflow: auto;
+}
+
+.sizing {
+    /* em is the inherited height of the text from parent to all of it's children
+        so, inheritance heirarchy of finding text size is below
+         current element availability -> parent element -> ... -> body -> html
+         by default in HTML font size is 16 px
+    
+        width : 10em;
+        means 10 * 16 px (default height of text in root HTML which is inherited)
+        = 160 px
+
+        rem :: root element font size ( HTML element -> 16px )
+    */
+    width: 15rem;
+    height: 15rem;
+    background-color: gold;
+    border-top: 3px solid orange;
+}
+
+.boxes {
+   border: 3px solid gray;
+   position: relative;
+}
+
+.box {
+    width: 5rem;
+    height: 5rem;
+}
+
+.box-one {
+    background-color: gold;
+}
+
+.box-two {
+    background-color: tomato;
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+}
+
+.box-three {
+    background-color: dodgerblue;
+}
+
+.tweet {
+    border: 1px solid lightblue;
+}
+
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.avatar {
+    width: 5rem;
+    height: 5rem;
+    background-color: gold;
+    float: left;
+    margin-right: 0.5rem;
+}
+
+.container{
+    border: 3px solid lightblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.innercontainer{
+    width: 5rem;
+    height: 5rem;
+    background: gold;
+    margin: 1rem;
+}   
+
+.gridcontainer {
+    display: grid;
+     /* 3 * 2 */
+     grid-template-rows: repeat(3, 100px);
+     grid-template-columns: repeat(2, 100px);
+     border: 3px solid dodgerblue;
+}
