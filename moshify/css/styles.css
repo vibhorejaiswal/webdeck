@@ -780,3 +780,29 @@ a {
     max-width: 500px;
     margin: 0 auto;
 }
+
+/* Feature */
+.feature{
+    --padding-bottom: 6rem;
+    padding: var(--padding-bottom) 2rem;
+    gap: 4rem 2rem;
+}
+
+.feature__content{
+    text-align: center;
+}
+
+.feature__image {
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .feature__content{
+        text-align: left;
+        align-self: center;
+    }
+
+    .feature:nth-of-type(even) .feature__content{
+        order: 2;
+    }
+}
