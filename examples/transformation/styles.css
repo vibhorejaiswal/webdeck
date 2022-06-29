@@ -1,0 +1,22 @@
+
+body {
+ display: flex;
+ justify-content: center;
+ align-items: center;   
+ height: 100vh;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background: gold;
+    transition: transform 0.5s cubic-bezier(.27,.86,.93,.26);
+}
+
+.box:hover {
+    /* transform: rotate(-15deg); */
+    /* transform: skew(-15deg); */
+    /* transform: scale(2); */
+    transform: translate(10px, 10px);
+}
+
